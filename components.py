@@ -16,6 +16,11 @@
 #def add(num1,num2):
 #    print(num1+num2)
 
-my_name = 'Mr Oliver'
-words = my_name.split(' ')
-print(words)
+#my_name = 'Mr Oliver'
+#words = my_name.split(' ')
+#print(words)
+
+def subtract(num1, num2):
+    return num1 - num2
+
+print(difference)
