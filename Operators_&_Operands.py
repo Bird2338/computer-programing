@@ -35,5 +35,21 @@ not_equals_to = (6 != 3)
 print (f'6 != 3 = {not_equals_to}')
 
 and_and1 = 4
-and_and2 = 7
-print (and_and1 and and_and2)
+and_and2 = 6
+if and_and1 == 4 and and_and2 == 6:
+    print (f'{and_and1} and {and_and2} are equal to 4 and 6, yay!')
+else:
+    print (f'{and_and1} and {and_and2} are not equal to 4 and 6, me sad...')
+
+or_or = 4
+if or_or == 4 or or_or == 6:
+    print('or_or is equals to 4 or 6, yay!')
+else:
+    print ('or_or is not equals to 4 or 6, me sad...')
+
+not_num = 4
+input_num = 4
+if input_num is not not_num:
+    print (f'{input_num} is not equal to {not_num}, yay!')
+else:
+    print(f'{input_num} is equal to {not_num}, me sad...')
