@@ -34,7 +34,7 @@ else:
 
 P_1 = int(input('How old is person one? '))
 P_2 = int(input('How old is person two? '))
-P_3 = int(input('How old is person three? '))\
+P_3 = int(input('How old is person three? '))
 
 if P_1 > P_2 and P_1 > P_3 and P_3 < P_2 and P_3 < P_1:
     print(f'Person one(age {P_1}) is the oldest and person three(age {P_3}) is the youngest')
