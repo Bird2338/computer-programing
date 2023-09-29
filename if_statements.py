@@ -59,8 +59,9 @@
 
 c_h = int(input('how many classes have been held? '))
 c_a = int(input('how many classes have you atended? '))
+c_a_p = ((c_a / c_h) * 100)
 
-if ((c_a / c_h) * 100) > 75:
-    print('He can attend')
+if ((c_a / c_h) * 100) >= 75:
+    print(f'{c_a_p}% He can attend, yay!')
 else:
-    print('He cant attend')
+    print(f'{c_a_p}% He cant attend, sad...')
