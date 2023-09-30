@@ -4,7 +4,7 @@
 
 
 # for nums_1 in range(1, 10):
-#     print(nums)
+#     print(nums_1)
 
 
 # Cheese_List = ['Bree', 'Parm', 'Goat', 'Blue']
