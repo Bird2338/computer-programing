@@ -96,6 +96,7 @@ for nums_9 in numbers:
         continue
 print(f'the smallest number is {Min}')
 
+
 cnt = 0
 numbers = [1,4,50,80,12,5,17,82,3,6,90,12,56,78,45,23,45,67,454,34]
 for nums_12 in numbers:
@@ -135,3 +136,20 @@ for z in range(1, 10000000000000000000000000):
         break
 print(numbers)
 
+
+g = 0
+for num_13 in range(10):
+    g = g + 3
+    print(g)
+    
+    
+h = 0
+for num_14 in range(10):
+    h = h + 5
+    print(h)
+    
+    
+j = 11
+for num_15 in range(10):
+    j = j -1
+    print(j)
