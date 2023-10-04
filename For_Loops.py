@@ -57,3 +57,81 @@ for nums_3 in Numbers:
     print(Sum)
     
     
+
+numbers = [2,5,6,10,15,20,25]
+for nums_5 in numbers:
+    nums_7 = 0
+    for nums_6 in range(1, 100):
+        nums_7 = nums_7 + 5
+        if nums_5 == nums_7:
+            t_f = 'true'
+            break
+        else:
+            t_f = 'false'
+    print(f'{nums_5} is {t_f}')
+    
+    
+list1 = ['Mango','Banana','Orange']
+list2 = list1
+for l2 in list2:
+    print(l2)
+    
+    
+numbers = [1,4,50,80,12]
+Max = 0
+for nums_8 in numbers:
+    if nums_8 > Max:
+        Max = nums_8
+    else:
+        continue
+print(f'the bigest number is {Max}')
+
+
+numbers = [1,4,50,80,12]
+Min = 1000
+for nums_9 in numbers:
+    if nums_9 < Min:
+        Min = nums_9
+    else:
+        continue
+print(f'the smallest number is {Min}')
+
+cnt = 0
+numbers = [1,4,50,80,12,5,17,82,3,6,90,12,56,78,45,23,45,67,454,34]
+for nums_12 in numbers:
+    cnt = cnt + 1
+cnt = cnt -1
+x = 0
+y = 0
+for z in range(1, 10000000000000000000000000):
+    if numbers[x] > numbers[x + 1]:
+        y = numbers[x]
+        numbers[x] = numbers[x + 1]
+        numbers[x + 1] = y
+        x = 0
+    else:
+        x = x + 1
+    if x == cnt:
+        break
+print(numbers)
+
+
+cnt = 0
+numbers = [1,4,50,80,12,5,17,82,3,6,90,12,56,78,45,23,45,67,454,34]
+for nums_12 in numbers:
+    cnt = cnt + 1
+cnt = cnt -1
+x = 0
+y = 0
+for z in range(1, 10000000000000000000000000):
+    if numbers[x] < numbers[x + 1]:
+        y = numbers[x]
+        numbers[x] = numbers[x + 1]
+        numbers[x + 1] = y
+        x = 0
+    else:
+        x = x + 1
+    if x == cnt:
+        break
+print(numbers)
+
