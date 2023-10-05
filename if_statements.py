@@ -62,12 +62,6 @@ c_a = int(input('how many classes have you atended? '))
 c_a_p = ((c_a / c_h) * 100)
 
 if ((c_a / c_h) * 100) >= 75:
-<<<<<<< HEAD
     print(f'{c_a_p}% He can attend, yay!')
 else:
     print(f'{c_a_p}% He cant attend, sad...')
-=======
-    print(f'{c_a_p}% He can attend the exam, yay!')
-else:
-    print(f'{c_a_p}% He cant attend the exam, sad...')
->>>>>>> bbd269e2edaed9a35fbe0866a480c9db22249a48
