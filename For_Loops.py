@@ -172,8 +172,4 @@ print('For loop to print the numbers in reverse order using range() function:')
 j = 11
 for num_15 in range(10):
     j = j -1
-<<<<<<< HEAD
     print(j)
-=======
-    print(j)
->>>>>>> 3a54279ec2544e5e7c426baecf399525b3925a25
