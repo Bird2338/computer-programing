@@ -163,7 +163,7 @@ for num_13 in range(10):
   
 print('For loop to print the multiples of 5 using range() function:')
 h = 0
-for num_14 in range(10):
+for num_14 in range(20):
     h = h + 5
     print(h)
     
