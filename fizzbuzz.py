@@ -1,5 +1,5 @@
 # How long is the FizzBuzz
-Pinput = input('How fizzy do yo want your buzz')
+Pinput = input('How fizzy do yo want your buzz: ')
 x = 1
 
 # FailSafe checkpoint
