@@ -7,15 +7,13 @@ with open('words.txt') as f:
     f.readline()
     y = y + 1
   word = f.readline()
+  print(word)
 
-word = word.lower()
-print(word)
-
-guess = input('give me one or more letters: ')
-guess = guess.lower()
-for z in range(len(word)):
-  for q in range(len(guess)):
-    if z != q:
-      break
-    elif word[z] == guess[q]:
-      print(word[z])
+is_right = False
+while is_right == False:
+  guess = input('Guess The Word: ')
+  if guess.lower() == word.lower():
+    print('That Was Correct!')
+    is_right = True
+  else:
+    print('Wrong')

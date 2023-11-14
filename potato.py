@@ -1,9 +1,9 @@
-person =potato
+person = 'potato'
 
-list = (one, two, three)
+list = ("one, two, three")
     
 dictionary = (
-    'name': 'potato'
+   'name': 'potato'
     "age": 16
 )
    
@@ -22,4 +22,3 @@ main_character = 'luigi'
 MyNameIsNot = 'cheese'
 
 my_name = 'bob'
-
