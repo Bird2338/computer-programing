@@ -1,4 +1,7 @@
 import time
 
-time.sleep(3)
-print('cheese')
+count = (3, 2, 1)
+
+for y in count:
+    print(y)
+    time.sleep(1)
