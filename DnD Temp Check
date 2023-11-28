@@ -1,0 +1,17 @@
+month_input = input('what month num is it? ')
+mountan_input = input('in mountans? y/n ').lower()
+latitude = input('what is the latitude? ')
+longitude = input('what is the longitude? ')
+
+month_input_check = month_input.isnumeric()
+mountan_input_check = month_input.isalpha()
+latitude_check = latitude.isnumeric()
+longitude_check = longitude.isnumeric()
+
+print(month_input_check)
+print(mountan_input_check)
+print(latitude_check)
+print(longitude_check)
+
+if (month_input_check == True) and (mountan_input_check == True) and (latitude_check == True) and (longitude_check == True):
+    print(true)
