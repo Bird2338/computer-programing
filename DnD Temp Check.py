@@ -27,7 +27,7 @@ if (mountan_input_check == True):
                         elif month_input == 3:
                             month_temp = 0 + random.randrange(-5,5)
                         elif month_input == 4:
-                            month_temp = 0 + random.randrange(-5,5)
+                            month_temp = 5 + random.randrange(-5,5)
                         elif month_input == 5:
                             month_temp = 10 + random.randrange(-5,5)
                         elif month_input == 6:
@@ -37,7 +37,7 @@ if (mountan_input_check == True):
                         elif month_input == 8:
                             month_temp = 10 + random.randrange(-5,5)
                         elif month_input == 9:
-                            month_temp = 0 + random.randrange(-5,5)
+                            month_temp = 5 + random.randrange(-5,5)
                         elif month_input == 10:
                             month_temp = 0 + random.randrange(-5,5)
                         elif month_input == 11:
