@@ -15,8 +15,8 @@ def is_integer(n):
 month_input = input('What Month Num Is It? ')
 mountan_input = input('In Mountans? y/n ').lower()
 desert_input = input('In Desert? y/n ').lower()
-latitude_input = input('What Is The Latitude? ')
 longitude_input = input('What Is The Longitude? ')
+latitude_input = input('What Is The Latitude? ')
 
 
 
@@ -84,9 +84,18 @@ if (month_input_check == True) and (mountan_input_check == True) and (desert_inp
         month_temp = 0 + random.randrange(-5,5)
     elif int(month_input) == 12:
         month_temp = 0 + random.randrange(-5,5)
-    # calculate temp depending on distence from corner
-    lon_lat_temp = int(round(math.sqrt(pow(((-25) - int(longitude)), 2) + pow(((-15) - (latitude)),2)))
-    print(lon_lat_temp)
+    # calculate distence from coldest spot
+    # coldest cordnents
+    cold_x = -25
+    cold_y = 15
+    cold_distence = int((round(math.sqrt(pow(((cold_x) - int(longitude_input)), 2) + pow((cold_y - int(latitude_input)),2)))))
+    print(cold_distence)
+    # calculate distence from hottest spot
+    # hottest cordnents
+    hot_x = 25
+    hot_y = -15
+    hot_distence = int((round(math.sqrt(pow(((hot_x) - int(longitude_input)), 2) + pow(((hot_y) - int(latitude_input)),2)))))
+    print(hot_distence)
 else:
     print('ERROR')
     
@@ -95,13 +104,4 @@ else:
 if x == 0:
     print('ERROR')
 else:
-    print(temp)
-
-
-
-
-
-
-
-
-
+    print('temp')
