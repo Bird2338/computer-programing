@@ -59,11 +59,13 @@ else:
 
 if (month_input_check == True) and (mountan_input_check == True) and (desert_input_check == True) and (latitude_input_check == True) and (longitude_input_check == True):
     x = 1
+    
+    
     # calculate Temp depending on the month
     if int(month_input) == 1:
-        month_temp = 0 + random.randrange(-5,5)
+        month_temp = -20 + random.randrange(-5,5)
     elif int(month_input) == 2:
-        month_temp = 0 + random.randrange(-5,5)
+        month_temp = -10 + random.randrange(-5,5)
     elif int(month_input) == 3:
         month_temp = 0 + random.randrange(-5,5)
     elif int(month_input) == 4:
@@ -71,9 +73,9 @@ if (month_input_check == True) and (mountan_input_check == True) and (desert_inp
     elif int(month_input) == 5:
         month_temp = 0 + random.randrange(-5,5)
     elif int(month_input) == 6:
-        month_temp = 0 + random.randrange(-5,5)
+        month_temp = 20 + random.randrange(-5,5)
     elif int(month_input) == 7:
-        month_temp = 0 + random.randrange(-5,5)
+        month_temp = 20 + random.randrange(-5,5)
     elif int(month_input) == 8:
         month_temp = 0 + random.randrange(-5,5)
     elif int(month_input) == 9:
@@ -83,19 +85,30 @@ if (month_input_check == True) and (mountan_input_check == True) and (desert_inp
     elif int(month_input) == 11:
         month_temp = 0 + random.randrange(-5,5)
     elif int(month_input) == 12:
-        month_temp = 0 + random.randrange(-5,5)
+        month_temp = -20 + random.randrange(-5,5)
+        
+        
     # calculate distence from coldest spot
     # coldest cordnents
     cold_x = -25
     cold_y = 15
     cold_distence = int((round(math.sqrt(pow(((cold_x) - int(longitude_input)), 2) + pow((cold_y - int(latitude_input)),2)))))
     print(cold_distence)
+    
+    
     # calculate distence from hottest spot
     # hottest cordnents
     hot_x = 25
     hot_y = -15
     hot_distence = int((round(math.sqrt(pow(((hot_x) - int(longitude_input)), 2) + pow(((hot_y) - int(latitude_input)),2)))))
     print(hot_distence)
+    
+    
+    # Temperature global average
+    Temperature_global_average = 52
+    
+    # Tempature calculation
+    tempature = Temperature_global_average + (0 - hot_distence) + (cold_distence)
 else:
     print('ERROR')
     
@@ -104,4 +117,4 @@ else:
 if x == 0:
     print('ERROR')
 else:
-    print('temp')
+    print(tempature)
