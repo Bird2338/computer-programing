@@ -1,0 +1,6 @@
+c = int(input('C = '))
+a = int(input('A = '))
+westside_zoo_price = (c * 3.75) + (a * 5.25)
+print(westside_zoo_price)
+southside_zoo_price = (c * 3.25) + (a * 5.75)
+print(southside_zoo_price)
