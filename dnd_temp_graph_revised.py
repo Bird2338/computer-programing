@@ -2,6 +2,7 @@
 other = True
 import math
 import random
+import turtle
 def is_integer(n):
     try:
         float(n)
@@ -66,8 +67,11 @@ for t in range(61):
         longitude_input = longi + 1
         if (month_input_check == True) and (mountan_input_check == True) and (desert_input_check == True) and (high_temp_check == True) and (low_temp_check == True):
             x = 1
-            
-            
+            my_window = turtle.Screen() 
+            my_window.bgcolor("white")       # creates a graphics window
+            my_pen = turtle.Turtle()
+
+
             # calculate Temp depending on the month
             if int(month_input) == 1:
                 month_temp = -20 + random.randrange(-5,5)
@@ -121,14 +125,27 @@ for t in range(61):
             # Tempature calculation
             tempature = temperature_global_average + hot_tempature + cold_tempature + month_temp
 
+            # if other == True:
+            #     if (tempature >= int(low_temp)) and (tempature <= int(high_temp)):
+            #         file = open('temp_graph.txt', 'a')
+            #         file.write(f'({int(longitude_input)},{int(latitude_input)}),')
+            #         file.close()
+            #         other = False
+            # else:
+            #     other = True
+
+
             if other == True:
-                if (tempature >= int(low_temp)) and (tempature <= int(high_temp)):
-                    file = open('temp_graph.txt', 'a')
-                    file.write(f'({int(longitude_input)},{int(latitude_input)}),')
-                    file.close()
-                    other = False
+                if tempature <= 0:
+                    my_pen.color('purple')
+                    my_pen.penup()
+                    my_pen.goto(longitude_input, latitude_input)
+                    my_pen.pendown()
+                    my_pen.dot()
             else:
                 other = True
+
+
 # Prints the temp
 if x == 0:
     print('ERROR')
