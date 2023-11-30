@@ -1,4 +1,5 @@
 # defining stuff
+other = True
 import math
 import random
 def is_integer(n):
@@ -40,26 +41,17 @@ if (desert_input.isalpha() == True) and (desert_input == 'y' or desert_input == 
 else:
     desert_input_check = False
 
-# Checking if latitude_input is valid
-
-if (is_integer(latitude_input) == True) and (int(latitude_input) <= 30) and (int(latitude_input) >= -30):
-    latitude_input_check = True
-else:
-    latitude_input_check = False
-    
-# Checking if longitude_input is valid
-if (is_integer(longitude_input) == True) and (int(longitude_input) <= 50) and (int(longitude_input) >= -50):
-    longitude_input_check = True
-else:
-    longitude_input_check = False
-    
 # Checking if high_temp is valid
-    if is_ineger(high_temp) == True:
-        high_temp_check = True
+if is_integer(high_temp) == True:
+    high_temp_check = True
+else:
+    high_temp_check = False
         
 # Checking if low_temp is valid
-    if is_ineger(low_temp) == True:
-        low_temp_check = True
+if is_integer(low_temp) == True:
+    low_temp_check = True
+else:
+    low_temp_check = False
     
     
 # Inputs are commputed into the final temp
@@ -72,7 +64,7 @@ for t in range(61):
     for i in range(101):
         longi = longitude_input
         longitude_input = longi + 1
-        if (month_input_check == True) and (mountan_input_check == True) and (desert_input_check == True) and (latitude_input_check == True) and (longitude_input_check == True) and (high_temp_check = True) and (low_temp_check = True):
+        if (month_input_check == True) and (mountan_input_check == True) and (desert_input_check == True) and (high_temp_check == True) and (low_temp_check == True):
             x = 1
             
             
@@ -124,14 +116,19 @@ for t in range(61):
             
             
             # Temperature global average
-            Temperature_global_average = 52
+            temperature_global_average = 52
     
             # Tempature calculation
-            tempature = Temperature_global_average + hot_tempature + cold_tempature
-        else:
-            print('ERROR')
-    
+            tempature = temperature_global_average + hot_tempature + cold_tempature + month_temp
 
+            if other == True:
+                if (tempature >= int(low_temp)) and (tempature <= int(high_temp)):
+                    file = open('temp_graph.txt', 'a')
+                    file.write(f'({int(longitude_input)},{int(latitude_input)}),')
+                    file.close()
+                    other = False
+            else:
+                other = True
 # Prints the temp
 if x == 0:
     print('ERROR')
