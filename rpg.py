@@ -1,6 +1,16 @@
 # Inports and basic variables
 race_info_true = False
 race_picked = False
+is_stats_done = False
+stat_input = 0
+ayok = False
+stat_points = 27
+str_ = 8
+dex_ = 8
+con_ = 8
+int_ = 8
+wis_ = 8
+cha_ = 8
 import time
 import random
 
@@ -126,10 +136,9 @@ def race_info_menu():
     
 # race picking while loop
 while race_picked == False:
-    time.sleep(0.5)
     print(".")
     print(f"What will {player_name}'s race be?")
-    time.sleep(0.5)
+    time.sleep(1)
     print("type 'race info' for information on races, or type 'rand' for a random race.")
     race_pick_input = input().lower()
     if race_pick_input == "race info":
@@ -190,4 +199,89 @@ while race_picked == False:
 
 
 # --------------------Picking stats--------------------
-# 
+# Picking stats start
+print(".")
+print("You have 27 points to spend on stats")
+time.sleep(1)
+print("The lowest your stats can go is 8 and the highest is 15")
+time.sleep(1)
+print("your stats start at 8")
+time.sleep(1)
+print("type '+' or '-' followed by the first three letters of a stat")
+
+# stat pick input loop
+def stat_pick_input():
+    stat_input = input().lower()
+    if (stat_input == "+str") or (stat_input == "+dex") or (stat_input == "+con") or (stat_input == "+int") or (stat_input == "+wis") or (stat_input == "+cha"):
+        if (stat_points != 0):
+            ayok = True
+            ()
+        else:
+            print("Invalid Input")
+            ayok = False
+            stat_pick_input()
+    elif (stat_input == "-str") or (stat_input == "-dex") or (stat_input == "-con") or (stat_input == "-int") or (stat_input == "-wis") or (stat_input == "-cha"):
+        ayok = True
+        ()
+    else:
+        print("Invalid Input")
+        ayok = False
+        stat_pick_input()
+# Picking stats loop
+while is_stats_done == False:
+    print(".")
+    print("stats")
+    time.sleep(1)
+    print(f"{str_} Strength")
+    time.sleep(0.2)
+    print(f"{dex_} Dexterity")
+    time.sleep(0.2)
+    print(f"{con_} Constitution")
+    time.sleep(0.2)
+    print(f"{int_} Intelligence")
+    time.sleep(0.2)
+    print(f"{wis_} Wisdom")
+    time.sleep(0.2)
+    print(f"{cha_} Charisma")
+    time.sleep(1)
+    print(f"You have {stat_points} points left")
+    stat_pick_input()
+    if (stat_input == "+str") and (int(str_ ) > 15):
+        temp_var = str_
+        str_ = temp_var + 1
+    elif (stat_input == "+dex") and (int(dex_ ) > 15):
+        temp_var = dex_
+        dex_ = temp_var + 1
+    elif (stat_input == "+con") and (int(con_ ) > 15):
+        temp_var = con_
+        con_ = temp_var + 1
+    elif (stat_input == "+int") and (int(int_ ) > 15):
+        temp_var = int_
+        int_ = temp_var + 1
+    elif (stat_input == "+wis") and (int(wis_ ) > 15):
+        temp_var = wis_
+        wis_ = temp_var + 1
+    elif (stat_input == "+cha") and (int(cha_ ) > 15):
+        temp_var = cha_
+        cha_ = temp_var + 1
+    elif (stat_input == "-str") and (int(str_ ) < 8):
+        temp_var = str_
+        str_ = temp_var - 1
+    elif (stat_input == "-dex") and (int(dex_ ) < 8):
+        temp_var = dex_
+        dex_ = temp_var - 1
+    elif (stat_input == "-con") and (int(con_ ) < 8):
+        temp_var = con_
+        con_ = temp_var - 1
+    elif (stat_input == "-int") and (int(int_ ) < 8):
+        temp_var = int_
+        int_ = temp_var - 1
+    elif (stat_input == "-wis") and (int(wis_ ) < 8):
+        temp_var = wis_
+        wis_ = temp_var - 1
+    elif (stat_input == "-cha") and (int(cha_ ) < 8):
+        temp_var = cha_
+        cha_ = temp_var - 1
+    else:
+        print("Invalid Input")
+        stat_pick_input()
