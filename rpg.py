@@ -138,17 +138,56 @@ while race_picked == False:
         rand_race = random.randrange(1,9)
         if rand_race == 1:
             player_race = "Human"
+            race_picked = True
         elif rand_race == 2:
             player_race = "Dwarf"
+            race_picked = True
         elif rand_race == 3:
             player_race = "Gnome"
+            race_picked = True
         elif rand_race == 4:
             player_race = "Goblin"
+            race_picked = True
         elif rand_race == 5:
             player_race = "Halfling"
+            race_picked = True
         elif rand_race == 6:
             player_race = "Elf"
         elif rand_race == 7:
+            race_picked = True
             player_race = "Half-Elf"
+            race_picked = True
         elif rand_race == 8:
             player_race = "Tiefling"
+            race_picked = True
+    elif race_pick_input == "human":
+        player_race = "Human"
+        race_picked = True
+    elif race_pick_input == "dwarf":
+        player_race = "Dwarf"
+        race_picked = True
+    elif race_pick_input == "gnome":
+        player_race = "Gnome"
+        race_picked = True
+    elif race_pick_input == "goblin":
+        player_race = "Goblin"
+        race_picked = True
+    elif race_pick_input == "halfling":
+        player_race = "Halfling"
+        race_picked = True
+    elif race_pick_input == "elf":
+        player_race = "Elf"
+        race_picked = True
+    elif race_pick_input == "half-elf":
+        player_race = "Half-Elf"
+        race_picked = True
+    elif race_pick_input == "tiefling":
+        player_race = "Tiefling"
+        race_picked = True
+    else:
+        print("Invalid race")
+
+
+
+# --------------------Picking stats--------------------
+# 
