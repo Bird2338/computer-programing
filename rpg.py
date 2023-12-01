@@ -1,27 +1,43 @@
 # Inports and basic variables
+race_info_true = False
+race_picked = False
 import time
 import random
 
 
-# def Type start loop
+
+# ----------Start up text----------
+# Def type start loop
 def type_start():
     start_input = input().lower()
-    if start_input == 'start':
+    if start_input == "start":
         ()
     else:
         type_start()
 
-
-
-# Start up text
+# running start up text
 print("Welcome to Oliver's magnifacint RPG simulator")
 time.sleep(2)
-print('Type start to play: ')
+print("Type start to play: ")
 type_start()
 
 
 
-# Picking a name
-print('Welcome adventurer')
+# ----------Picking a name----------
+print("Welcome adventurer")
 time.sleep(1)
-player_name = input('What shall you be known as? ')
+print("Who will you be known as?: ")
+player_name = input()
+
+
+
+# ----------Picking a race----------
+# race picking while loop
+while race_picked == False:
+    time.sleep(1)
+    print(f"What will {player_name}'s race be?")
+    time.sleep(1)
+    print("Type a 'race' or type 'race info': ")
+    race_pick_input = input().lower()
+    if race_pick_input == "race info":
+        print(True)
