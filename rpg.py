@@ -241,6 +241,7 @@ while race_picked == False:
 
 
 # --------------------Picking stats--------------------
+# #$&$%^^*$%#$@#%@^$%&^*&(%**^%#&$^@#%!^@&#%^*$&(%*^)(&(%^*$%#&$@^#@^#U$%*(&^)&(%*^$#%@^#!%$^@&#%*&$(*%)(*&(%^*$#%@#%^@%$&%*$&^(%*&%^*$%&#$@^#!%$@^&#^*$&%(*^&(%^*$%#&$@^#)))))))))motify playabilaty
 # Picking stats start
 print(".")
 time.sleep(1)
@@ -252,7 +253,7 @@ print("your stats start at 8")
 time.sleep(0.1)
 print("type '+' or '-' followed by the first three letters of a stat")
 time.sleep(0.1)
-print("removing a point will give you that point back to spent somewhere else")
+print("removing a point will give you that point back to be spent somewhere else")
 
 # stat pick input loop
 def stat_pick_input():
@@ -382,12 +383,139 @@ while is_stats_done == False:
 
 
 
+# --------------------Race stat increases--------------------
+# #$&$%^^*$%#$@#%@^$%&^*&(%**^%#&$^@#%!^@&#%^*$&(%*^)(&(%^*$%#&$@^#@^#U$%*(&^)&(%*^$#%@^#!%$^@&#%*&$(*%)(*&(%^*$#%@#%^@%$&%*$&^(%*&%^*$%&#$@^#!%$@^&#^*$&%(*^&(%^*$%#&$@^#)))))))))motify playabilaty
+# ability score increase
+def ability_score_increase():
+    global str_
+    global dex_
+    global con_
+    global int_
+    global wis_
+    global cha_
+    print(".")
+    time.sleep(1)
+    print("abiltiy score increase")
+    time.sleep(0.1)
+    print("Type the first three letters of the ability you wish to increase by one")
+    time.sleep(1)
+    print(".")
+    time.sleep(0.1)
+    print(f"{str_} Strength")
+    time.sleep(0.1)
+    print(f"{dex_} Dexterity")
+    time.sleep(0.1)
+    print(f"{con_} Constitution")
+    time.sleep(0.1)
+    print(f"{int_} Intelligence")
+    time.sleep(0.1)
+    print(f"{wis_} Wisdom")
+    time.sleep(0.1)
+    print(f"{cha_} Charisma")
+    time.sleep(0.1)
+    ability_score_increase_input = input().lower()
+    if ability_score_increase_input == "str":
+        var_hold = str_
+        str_ = var_hold + 1
+    elif ability_score_increase_input == "dex":
+        var_hold = dex_
+        dex_ = var_hold + 1
+    elif ability_score_increase_input == "con":
+        var_hold = con_
+        con_ = var_hold + 1
+    elif ability_score_increase_input == "int":
+        var_hold = int_
+        int_ = var_hold + 1
+    elif ability_score_increase_input == "wis":
+        var_hold = wis_
+        wis_ = var_hold + 1
+    elif ability_score_increase_input == "cha":
+        var_hold = cha_
+        cha_ = var_hold + 1
+    else:
+        print("Invalid input")
+        ability_score_increase_input()
 
-
-
-
-
-
-
-
-        
+if player_race == "Human":
+    var_hold = str_
+    str_ = var_hold + 1
+    var_hold = dex_
+    dex_ = var_hold + 1
+    var_hold = con_
+    con_ = var_hold + 1
+    var_hold = int_
+    int_ = var_hold + 1
+    var_hold = wis_
+    wis_ = var_hold + 1
+    var_hold = cha_
+    cha_ = var_hold + 1
+elif player_race == "Dwarf":
+    var_hold = con_
+    con_ = var_hold + 2
+elif player_race == "Gnome":
+    var_hold = int_
+    int_ = var_hold + 2
+elif player_race == "Goblin":
+    var_hold = dex_
+    dex_ = var_hold + 2
+    var_hold = con_
+    con_ = var_hold + 1
+elif player_race == "Halfling":
+    var_hold = dex_
+    dex_ = var_hold + 2
+elif player_race == "Elf":
+    var_hold = dex_
+    dex_ = var_hold + 2
+elif player_race == "Half-Elf":
+    ability_score_increase()
+    time.sleep(1)
+    print(".")
+    time.sleep(0.1)
+    print(f"{str_} Strength")
+    time.sleep(0.1)
+    print(f"{dex_} Dexterity")
+    time.sleep(0.1)
+    print(f"{con_} Constitution")
+    time.sleep(0.1)
+    print(f"{int_} Intelligence")
+    time.sleep(0.1)
+    print(f"{wis_} Wisdom")
+    time.sleep(0.1)
+    print(f"{cha_} Charisma")
+    time.sleep(0.1)
+    ability_score_increase()
+    time.sleep(1)
+    print(".")
+    time.sleep(0.1)
+    print(f"{str_} Strength")
+    time.sleep(0.1)
+    print(f"{dex_} Dexterity")
+    time.sleep(0.1)
+    print(f"{con_} Constitution")
+    time.sleep(0.1)
+    print(f"{int_} Intelligence")
+    time.sleep(0.1)
+    print(f"{wis_} Wisdom")
+    time.sleep(0.1)
+    print(f"{cha_} Charisma")
+    time.sleep(0.1)
+    var_hold = cha_
+    cha_ = var_hold + 2
+elif player_race == "Tiefling":
+    var_hold = cha_
+    cha_ = var_hold + 2
+    var_hold = int_
+    int_ = var_hold + 1
+print("your final starting stats are:")
+time.sleep(1)
+print(f"{str_} Strength")
+time.sleep(0.1)
+print(f"{dex_} Dexterity")
+time.sleep(0.1)
+print(f"{con_} Constitution")
+time.sleep(0.1)
+print(f"{int_} Intelligence")
+time.sleep(0.1)
+print(f"{wis_} Wisdom")
+time.sleep(0.1)
+print(f"{cha_} Charisma")
