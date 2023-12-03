@@ -8,7 +8,7 @@ is_stats_done = False
 ayok = False
 stat_input = 0
 global stat_points
-stat_points = 1
+stat_points = 15
 global str_
 global dex_
 global con_
