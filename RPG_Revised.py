@@ -327,15 +327,17 @@ elif player["race"] == "Tiefling":
 # print stat instructions
 print(".")
 time.sleep(1)
-print(f"You have {stat_points} points to spend on stats")
+print(f"You have {stat_points} points to spend on stats.")
 time.sleep(0.1)
-print("The lowest your stats can go is 8 and the highest is 15")
+print("The lowest your stats can go is 8 and the highest is 15.")
 time.sleep(0.1)
-print("your stats start at 8")
+print("your stats start at 8.")
 time.sleep(0.1)
-print("type '+' or '-' followed by the first three letters of a stat")
+print("type '+'number or '-'number followed by the first three letters of a stat.")
 time.sleep(0.1)
-print("removing a point will give you that point back to be spent somewhere else")
+print("example - '+3str'")
+time.sleep(0.1)
+print("removing a point will give you that point back to be spent somewhere else.")
 
 # print stats
 def print_stats():
@@ -368,17 +370,150 @@ def stat_input_loop():
     stat_input = input()
     if len(stat_input) == 5:
         if (stat_input[2] == "s") and (stat_input[3] == "t") and (stat_input[4] == "r"):
-            print(True)
+            if stat_input[0] == "+":
+                if player["str"] + int(stat_input[1]) <= 15:
+                    hold = player["str"]
+                    player["str"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["str"] - int(stat_input[1]) >= 8:
+                    hold = player["str"]
+                    player["str"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
+        elif (stat_input[2] == "d") and (stat_input[3] == "e") and (stat_input[4] == "x"):
+            if stat_input[0] == "+":
+                if player["dex"] + int(stat_input[1]) <= 15:
+                    hold = player["dex"]
+                    player["dex"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["dex"] - int(stat_input[1]) >= 8:
+                    hold = player["dex"]
+                    player["dex"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
+        elif (stat_input[2] == "c") and (stat_input[3] == "o") and (stat_input[4] == "n"):
+            if stat_input[0] == "+":
+                if player["con"] + int(stat_input[1]) <= 15:
+                    hold = player["con"]
+                    player["con"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["con"] - int(stat_input[1]) >= 8:
+                    hold = player["con"]
+                    player["con"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
+        elif (stat_input[2] == "i") and (stat_input[3] == "n") and (stat_input[4] == "t"):
+            if stat_input[0] == "+":
+                if player["int"] + int(stat_input[1]) <= 15:
+                    hold = player["int"]
+                    player["int"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["int"] - int(stat_input[1]) >= 8:
+                    hold = player["int"]
+                    player["int"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
+        elif (stat_input[2] == "w") and (stat_input[3] == "i") and (stat_input[4] == "s"):
+            if stat_input[0] == "+":
+                if player["wis"] + int(stat_input[1]) <= 15:
+                    hold = player["wis"]
+                    player["wis"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["wis"] - int(stat_input[1]) >= 8:
+                    hold = player["wis"]
+                    player["wis"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
+        elif (stat_input[2] == "c") and (stat_input[3] == "h") and (stat_input[4] == "a"):
+            if stat_input[0] == "+":
+                if player["cha"] + int(stat_input[1]) <= 15:
+                    hold = player["cha"]
+                    player["cha"] = hold + int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold - int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            elif stat_input[0] == "-":
+                if player["cha"] - int(stat_input[1]) >= 8:
+                    hold = player["cha"]
+                    player["cha"] = hold - int(stat_input[1])
+                    hold = stat_points
+                    stat_points = hold + int(stat_input[1])
+                else:
+                    print("Invalid Input")
+                    stat_input_loop()
+            else:
+                print("Invalid Input")
+                stat_input_loop()
         else:
             print("Invalid Input")
             stat_input_loop()
+        
     else:
         print("Invalid Input")
         stat_input_loop()
+        
 # Picking stats loop
 while is_stats_done == False:
     print_stats()
-    
+    print(f"you have {stat_points} points left")
+    stat_input_loop()
     
     
 # --------------------Race stat increases--------------------
