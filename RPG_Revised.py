@@ -7,10 +7,7 @@ import random
 race_picked = False
 race_info_true = False
 hold = 0
-stat_points = 15
-stat_input = 0
 is_stats_done = False
-no_done = False
 
 
 
@@ -320,8 +317,24 @@ elif player["race"] == "Tiefling":
 
 
 # --------------------Picking stats--------------------
+# print stat instructions
+print(".")
+time.sleep(1)
+print("You have 15 points to spend on stats")
+time.sleep(0.1)
+print("The lowest your stats can go is 8 and the highest is 15")
+time.sleep(0.1)
+print("your stats start at 8")
+time.sleep(0.1)
+print("type '+' or '-' followed by the first three letters of a stat")
+time.sleep(0.1)
+print("removing a point will give you that point back to be spent somewhere else")
 
-
+# stat loop
+while is_stats_done == False:
+    print(".")
+    time.sleep(1)
+    print("-----Stats-----")
 
 
 # --------------------Race stat increases--------------------
