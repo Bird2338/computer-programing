@@ -8,6 +8,7 @@ race_picked = False
 race_info_true = False
 hold = 0
 is_stats_done = False
+stat_points = 15
 
 
 
@@ -20,7 +21,13 @@ player = {
     "darkvision": 0,
     "resistances": [],
     "abilitys": [],
-    "proficiencies": []
+    "proficiencies": [],
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10,
 }
 
 
@@ -320,7 +327,7 @@ elif player["race"] == "Tiefling":
 # print stat instructions
 print(".")
 time.sleep(1)
-print("You have 15 points to spend on stats")
+print(f"You have {stat_points} points to spend on stats")
 time.sleep(0.1)
 print("The lowest your stats can go is 8 and the highest is 15")
 time.sleep(0.1)
@@ -330,14 +337,48 @@ print("type '+' or '-' followed by the first three letters of a stat")
 time.sleep(0.1)
 print("removing a point will give you that point back to be spent somewhere else")
 
-# stat loop
-while is_stats_done == False:
+# print stats
+def print_stats():
     print(".")
     time.sleep(1)
     print("-----Stats-----")
+    time.sleep(0.1)
+    hold = player["str"]
+    print(f"strength {hold}")
+    time.sleep(0.1)
+    hold = player["dex"]
+    print(f"dexterity {hold}")
+    time.sleep(0.1)
+    hold = player["con"]
+    print(f"constitution {hold}")
+    time.sleep(0.1)
+    hold = player["int"]
+    print(f"intelligence {hold}")
+    time.sleep(0.1)
+    hold = player["wis"]
+    print(f"wisdom {hold}")
+    time.sleep(0.1)
+    hold = player["cha"]
+    print(f"charisma {hold}")
 
-
+# stat_input_loop
+def stat_input_loop():
+    global player
+    global stat_points
+    stat_input = input()
+    if len(stat_input) == 5:
+        if (stat_input[2] == "s") and (stat_input[3] == "t") and (stat_input[4] == "r"):
+            print(True)
+        else:
+            print("Invalid Input")
+            stat_input_loop()
+    else:
+        print("Invalid Input")
+        stat_input_loop()
+# Picking stats loop
+while is_stats_done == False:
+    print_stats()
+    
+    
+    
 # --------------------Race stat increases--------------------
-
-
-
