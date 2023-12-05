@@ -2,6 +2,7 @@
 # inports
 import time
 import random
+import math
 
 # variabls
 race_picked = False
@@ -15,19 +16,41 @@ stat_points = 15
 # --------------------Player charactor index--------------------
 # player index
 player = {
+    # base stats
+    "max_health": 0,
+    "health": 0,
+    "gold": 0,
+    "level": 1,
     "name": 0,
     "race": 0,
     "speed": 0,
-    "darkvision": 0,
-    "resistances": [],
-    "abilitys": [],
-    "proficiencies": [],
+    # stats
     "str": 10,
     "dex": 10,
     "con": 10,
     "int": 10,
     "wis": 10,
     "cha": 10,
+    # abilitys
+    "darkvision": 0,
+    "resistances": [],
+    "abilitys": [],
+    "proficiencies": [],
+    "inventory": [],
+    # weapons
+    "weapon_one": 0,
+    "weapon_two": 0,
+    # spells
+    "spells": [],
+    # armors
+    "gauntlets": 0,
+    "main_armor": 0,
+    "helm": 0,
+    "boots": 0,
+    # trinkets
+    "ring_one": 0,
+    "ring_two": 0,
+    "amulet": 0
 }
 
 
@@ -509,11 +532,125 @@ def stat_input_loop():
         print("Invalid Input")
         stat_input_loop()
         
+# is done picking stats loop
+def done_picking_stats_input():
+    stat_done = input().lower()
+    if stat_done == "y":
+        global is_stats_done
+        is_stats_done = True
+    else:
+        ()
+
 # Picking stats loop
 while is_stats_done == False:
     print_stats()
     print(f"you have {stat_points} points left")
     stat_input_loop()
+    if stat_points == 0:
+        print_stats()
+        print("you have 0 points left, are you done picking stats? y/n")
+        done_picking_stats_input()
+    
     
     
 # --------------------Race stat increases--------------------
+def ability_score_increase():
+    print(".")
+    time.sleep(1)
+    print("abiltiy score increase")
+    time.sleep(0.1)
+    print("Type the first three letters of the ability you wish to increase by one")
+    print_stats()
+    ability_score_increase_input = input().lower()
+    if ability_score_increase_input == "str":
+        hold = player["str"]
+        player["str"] = hold + 1
+    elif ability_score_increase_input == "dex":
+        hold = player["dex"]
+        player["dex"] = hold + 1
+    elif ability_score_increase_input == "con":
+        hold = player["con"]
+        player["con"] = hold + 1
+    elif ability_score_increase_input == "int":
+        hold = player["int"]
+        player["int"] = hold + 1
+    elif ability_score_increase_input == "wis":
+        hold = player["wis"]
+        player["wis"] = hold + 1
+    elif ability_score_increase_input == "cha":
+        hold = player["cha"]
+        player["cha"] = hold + 1
+    else:
+        print("Invalid input")
+        ability_score_increase_input()
+
+if player["race"] == "Human":
+    hold = player["str"]
+    player["str"] = hold + 1
+    hold = player["dex"]
+    player["dex"] = hold + 1
+    hold = player["con"]
+    player["con"] = hold + 1
+    hold = player["int"]
+    player["int"] = hold + 1
+    hold = player["wis"]
+    player["wis"] = hold + 1
+    hold = player["cha"]
+    player["cha"] = hold + 1
+elif player["race"] == "Dwarf":
+    hold = player["con"]
+    player["con"] = hold + 2
+elif player["race"] == "Gnome":
+    hold = player["int"]
+    player["int"] = hold + 2
+elif player["race"] == "Goblin":
+    hold = player["dex"]
+    player["dex"] = hold + 2
+    hold = player["con"]
+    player["con"] = hold + 1
+elif player["race"] == "Halfling":
+    hold = player["dex"]
+    player["dex"] = hold + 2
+elif player["race"] == "Elf":
+    hold = player["dex"]
+    player["dex"] = hold + 2
+elif player["race"] == "Half-Elf":
+    ability_score_increase()
+    print_stats()
+    ability_score_increase()
+    print_stats()
+    hold = player["cha"]
+    player["cha"] = hold + 2
+elif player["race"] == "Tiefling":
+    hold = player["cha"]
+    player["cha"] = hold + 2
+    hold = player["int"]
+    player["int"] = hold + 1
+
+# print final stats
+print(".")
+time.sleep(1)
+print("-----Final Stats-----")
+time.sleep(0.1)
+hold = player["str"]
+print(f"strength {hold}")
+time.sleep(0.1)
+hold = player["dex"]
+print(f"dexterity {hold}")
+time.sleep(0.1)
+hold = player["con"]
+print(f"constitution {hold}")
+time.sleep(0.1)
+hold = player["int"]
+print(f"intelligence {hold}")
+time.sleep(0.1)
+hold = player["wis"]
+print(f"wisdom {hold}")
+time.sleep(0.1)
+hold = player["cha"]
+print(f"charisma {hold}")
+
+# health
+player["max_health"] = 5 + int(math.floor(player["con"]))
+
+print(player)
