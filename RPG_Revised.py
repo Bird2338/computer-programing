@@ -673,6 +673,44 @@ def type_game_start():
     start_game_input = input().lower()
     if start_game_input == "start":
         ()
+    elif start_game_input == "/dev add":
+        player = {
+        # base stats
+        "max_health": 0,
+        "health": 0,
+        "gold": 0,
+        "level": 1,
+        "name": 0,
+        "race": 0,
+        "speed": 0,
+        # stats
+        "str": 10,
+        "dex": 10,
+        "con": 10,
+        "int": 10,
+        "wis": 10,
+        "cha": 10,
+        # abilitys
+        "darkvision": 0,
+        "resistances": [],
+        "abilitys": [],
+        "proficiencies": [],
+        "invintory": [],
+        # weapons
+        "weapon_one": 0,
+        "weapon_two": 0,
+        # spells
+        "spells": [],
+        # armors
+        "gauntlets": 0,
+        "main_armor": 0,
+        "helm": 0,
+        "boots": 0,
+        # trinkets
+        "ring_one": 0,
+        "ring_two": 0,
+        "amulet": 0,
+        }
     else:
         type_game_start()
 
@@ -695,54 +733,77 @@ time.sleep(1)
 print("You have been called by His Majesty, 'High Eldchester Aldvon',")
 print("to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
 print(".")
-time.sleep(5)
+time.sleep(6)
 print("It is a sunny morning and the sun glistens off the dewy grass")
 print("as you leave the small picturesque town of Fellsburry.")
 print(".")
-time.sleep(5)
+time.sleep(6)
 print("The path fades from cobble to a dusty dirt road")
 print("as you walk down the hill towards the Thornwood forest.")
-time.sleep(5)
+print(".")
+time.sleep(6)
 
 
 # --------------------intoduction--------------------
-# man talk
-print(".")
-time.sleep(1)
+# Old Man Be Talkin
 print("As you come cloaser to the edge of the forest")
-print("you are stoped by a small hunched old man.")
+print("you are stoped by a small hunched old man sitting on a ramshackle dirty cart.")
 print(".")
-time.sleep(4)
+time.sleep(6)
 print("The man speeks to you in a creaky sharp voice.")
 print(".")
-time.sleep(2)
+time.sleep(3)
 print("-----Old Man-----")
 print("I see your Leaving the city.")
 print(".")
-time.sleep(2)
+time.sleep(3)
 print("Might I intrest you in some knowledge, sire?")
 print(".")
-time.sleep(2)
+time.sleep(3)
 print("Before you leave, there are a few things you must know.")
 print(".")
 time.sleep(3)
 print("If you should ever in doubt along your travals just type '?'")
-print("To see what actions you can preform at any given time.")
+print("To see what commands you can preform.")
 print(".")
-time.sleep(5)
+time.sleep(6)
 print("You will learn the rest along the way.")
 print(".")
+time.sleep(3)
 if new_to_this == True:
-    print("I see you are new to this my good sir.")
+    print("-----Old Man-----")
+    print(f"I see you are new to this{name_hold}.")
     print(".")
     time.sleep(2)
     print("I shall give you two health potions")
-    print("to help you along your way.")
-    player["invintory"].append(health_potion)
-    player["invintory"].append(health_potion)
+    print
+    print(".")
+    player["invintory"].append("health_potion")
+    player["invintory"].append("health_potion")
+    time.sleep(3)
+    print("-----Old Man-----")
+    print("It seems you don't have a weapon yet.")
+    print(".")
+    time.sleep(2)
+    print("perhaps you will find somthing in this old cart of mine.")
+    print(".")
+    time.sleep(3)
+    print("-----------------")
+    print("You search the cart and are rewarded with the discovery of")
+    print("a slightly rusty short sword that still glints in the sun.")
+    player["invintory"].append("short_sword")
+    print(".")
+    time.sleep(6)
+    print("-----Old Man-----")
+    print("You still need to equip the sword in your invintory.")
+    print(".")
+    time.sleep(3)
+    print("But im sure you can figure it out.")
+    print(".")
+    time.sleep(3)
+print("That is all I have to say, good luck.")
+print("-----------------")
+
 print(player)
-
-
-
 
 
