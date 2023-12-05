@@ -682,4 +682,4 @@ type_game_start()
 # intro text
 print(".")
 time.sleep(1)
-print(f"You {name_hold}, are one of the many Slayers Guild members that have been called by His Majesty High Eldchester Aldvon, to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
+print(f"You have been called by His Majesty, 'High Eldchester Aldvon', to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
