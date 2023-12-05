@@ -682,4 +682,34 @@ type_game_start()
 # intro text
 print(".")
 time.sleep(1)
-print(f"You have been called by His Majesty, 'High Eldchester Aldvon', to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
+print("You have been called by His Majesty, 'High Eldchester Aldvon',")
+print("to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
+time.sleep(4)
+print("It is a sunny morning and the sun glistens off the dewy grass")
+print("as you leave the small picturesque town of Fellsburry.")
+time.sleep(4)
+print("The path fades from cobble to a dusty dirt road as you walk down the hill towards the Thornwood forest.")
+time.sleep(4)
+
+
+# --------------------intoduction--------------------
+# man talk
+print(".")
+time.sleep(1)
+print("As you come cloaser you see at the edge of the forest")
+print("you are stoped by a small hunched old man.")
+time.sleep(4)
+print("The man speeks to you in a creaky sharp voice")
+time.sleep(2)
+print("-----Old Man-----")
+print("stupid child")
+
+
+
+
+
+
+
+
+
+
