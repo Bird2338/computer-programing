@@ -650,7 +650,35 @@ time.sleep(0.1)
 hold = player["cha"]
 print(f"charisma {hold}")
 
-# health
-player["max_health"] = 5 + int(math.floor(player["con"]))
 
-print(player)
+
+# --------------------Health--------------------
+player["max_health"] = 5 + int(math.floor((player["con"] - 10) / 2))
+player["health"] = player["max_health"]
+
+
+
+# --------------------Start up text--------------------
+# Def type start loop
+def type_game_start():
+    start_game_input = input().lower()
+    if start_game_input == "start":
+        ()
+    else:
+        type_game_start()
+
+
+
+# running start up text
+print(".")
+time.sleep(1)
+print(f"Welcome to Illdara {name_hold}")
+time.sleep(1)
+print("Type start to play: ")
+type_game_start()
+
+
+
+# ---------------------------------------------------------------------
+# ------------------------------Game Play------------------------------
+# ---------------------------------------------------------------------
