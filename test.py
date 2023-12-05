@@ -1,9 +1,44 @@
-greeting = input("Hello, possible pirate! What's the password?")
+# intro text
+import time
+print(".")
+time.sleep(1)
+print("You have been called by His Majesty, 'High Eldchester Aldvon',")
+print("to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
+print(".")
+time.sleep(5)
+print("It is a sunny morning and the sun glistens off the dewy grass")
+print("as you leave the small picturesque town of Fellsburry.")
+print(".")
+time.sleep(5)
+print("The path fades from cobble to a dusty dirt road")
+print("as you walk down the hill towards the Thornwood forest.")
+time.sleep(5)
 
-if greeting in ("Arrr!"):
 
-	print("Go away, pirate.")
-
-else:
-	print("Greetings, hater of pirates!")
-	
+# --------------------intoduction--------------------
+# man talk
+print(".")
+time.sleep(1)
+print("As you come cloaser to the edge of the forest")
+print("you are stoped by a small hunched old man.")
+print(".")
+time.sleep(4)
+print("The man speeks to you in a creaky sharp voice.")
+print(".")
+time.sleep(2)
+print("-----Old Man-----")
+print("I see your Leaving the city.")
+print(".")
+time.sleep(2)
+print("Might I intrest you in some knowledge, sire?")
+print(".")
+time.sleep(2)
+print("Before you leave, there are a few things you must know.")
+print(".")
+time.sleep(3)
+print("If you should ever in doubt along your travals just type '?'")
+print("To see what actions you can preform at any given time.")
+print(".")
+time.sleep(5)
+print("You will learn the rest along the way.")
+print(".")

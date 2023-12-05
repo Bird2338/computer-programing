@@ -10,6 +10,15 @@ race_info_true = False
 hold = 0
 is_stats_done = False
 stat_points = 15
+new_to_this = True
+
+
+
+# --------------------item indexes--------------------
+# health potion
+health_potion = {
+    "type": "potion"
+}
 
 
 
@@ -36,7 +45,7 @@ player = {
     "resistances": [],
     "abilitys": [],
     "proficiencies": [],
-    "inventory": [],
+    "invintory": [],
     # weapons
     "weapon_one": 0,
     "weapon_two": 0,
@@ -50,7 +59,7 @@ player = {
     # trinkets
     "ring_one": 0,
     "ring_two": 0,
-    "amulet": 0
+    "amulet": 0,
 }
 
 
@@ -680,34 +689,58 @@ type_game_start()
 
 
 # intro text
+import time
 print(".")
 time.sleep(1)
 print("You have been called by His Majesty, 'High Eldchester Aldvon',")
 print("to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
-time.sleep(4)
+print(".")
+time.sleep(5)
 print("It is a sunny morning and the sun glistens off the dewy grass")
 print("as you leave the small picturesque town of Fellsburry.")
-time.sleep(4)
-print("The path fades from cobble to a dusty dirt road as you walk down the hill towards the Thornwood forest.")
-time.sleep(4)
+print(".")
+time.sleep(5)
+print("The path fades from cobble to a dusty dirt road")
+print("as you walk down the hill towards the Thornwood forest.")
+time.sleep(5)
 
 
 # --------------------intoduction--------------------
 # man talk
 print(".")
 time.sleep(1)
-print("As you come cloaser you see at the edge of the forest")
+print("As you come cloaser to the edge of the forest")
 print("you are stoped by a small hunched old man.")
+print(".")
 time.sleep(4)
-print("The man speeks to you in a creaky sharp voice")
+print("The man speeks to you in a creaky sharp voice.")
+print(".")
 time.sleep(2)
 print("-----Old Man-----")
-print("stupid child")
-
-
-
-
-
+print("I see your Leaving the city.")
+print(".")
+time.sleep(2)
+print("Might I intrest you in some knowledge, sire?")
+print(".")
+time.sleep(2)
+print("Before you leave, there are a few things you must know.")
+print(".")
+time.sleep(3)
+print("If you should ever in doubt along your travals just type '?'")
+print("To see what actions you can preform at any given time.")
+print(".")
+time.sleep(5)
+print("You will learn the rest along the way.")
+print(".")
+if new_to_this == True:
+    print("I see you are new to this my good sir.")
+    print(".")
+    time.sleep(2)
+    print("I shall give you two health potions")
+    print("to help you along your way.")
+    player["invintory"].append(health_potion)
+    player["invintory"].append(health_potion)
+print(player)
 
 
 
