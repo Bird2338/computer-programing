@@ -60,8 +60,9 @@ player = {
     "ring_one": 0,
     "ring_two": 0,
     "amulet": 0,
-    # start area
-    "start_area": "forest"
+    # player area
+    "area": "forest",
+    "where": "trail"
 }
 
 
@@ -836,10 +837,17 @@ type_start()
 
 
 # --------------------Game run--------------------
+# input def
+def new_input():
+    print("if in doubt type '?'")
+
 # forest area
 def new_forest_area():
+    while player["area"] == "forest":
+         if player["where"] == "trail":
+             new_input()
     
 # program start
-if player["start_area"] == "forest":
+if player["area"] == "forest":
     new_forest_area()
 
