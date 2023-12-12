@@ -876,6 +876,7 @@ def new_input_def():
     while new_input_done == False:
         new_input_done = True
         print(".")
+        sleep(0.1)
         print("if in doubt type '?'")
         new_input = input("input: ").lower()
         if new_input == "?":
