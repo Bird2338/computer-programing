@@ -808,7 +808,7 @@ def type_start():
                     "resistances": [],
                     "abilitys": [],
                     "proficiencies": [],
-                    "invintory": [],
+                    "invintory": ["health_potion", "health_potion", "short_sword"],
                     # weapons
                     "weapon_one": 0,
                     "weapon_two": 0,
@@ -842,10 +842,27 @@ type_start()
 
 # --------------------Game run--------------------
 time = "morning"
+# invintory input
+def invintory_input():
+    invintory_input_input = input().lower
+    if invintory_input_input[1] == "e":
+        new_hold = invintory_input_input.replace(" ", "").replace("e", "", 1)
+        if new_hold in player["invintory"]:
+            print("cheese curds")
+    else:
+        print("Invalid Input")
+        
+
+
 # invintory
 def invintory():
     print(player["invintory"])
-
+    print(".")
+    sleep(0.1)
+    print("type 'e' or 'equip' folowed by the name of an item to equip it")
+    print("type '?' followed by the name of an item to veiw it's stats")
+    print("or type 'back' to go back")
+    invintory_input() 
 
 
 # forest continue random
