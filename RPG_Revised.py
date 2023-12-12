@@ -1,19 +1,12 @@
 # --------------------Inports and basic variables--------------------
-global time
-global random
-global math
-global race_picked
-global race_info_true
-global hold
-global is_stats_done
-global stat_points
-global new_to_this
-global health_potion
-global player
 # inports
-import time
+from time import sleep
 import random
 import math
+
+# global time
+# global random
+# global math
 
 # variabls
 race_picked = False
@@ -81,13 +74,22 @@ player = {
 # --------------------Start up text--------------------
 # Def type start loop
 def type_start():
+    global race_picked
+    global race_info_true
+    global hold
+    global is_stats_done
+    global stat_points
+    global new_to_this
+    global health_potion
+    global player
     start_input = input().lower()
     if start_input == "start":
+        
         # --------------------Picking a name--------------------
         print(".")
-        time.sleep(1)
+        sleep(1)
         print("Welcome adventurer")
-        time.sleep(1)
+        sleep(1)
         print("Who will you be known as?: ")
         player["name"] = input()
 
@@ -109,120 +111,120 @@ def type_start():
                 ()
             elif race_info_input == "human":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Human Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +1 to every stat")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- speed = 30 feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "dwarf":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Dwarf Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Constitution")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 25 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Poison Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "gnome":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Gnome Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Intelligence")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 25 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("-Mind Magic Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "goblin":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Goblin Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Dexterity and +1 to Constitution")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 30 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Charm Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Nimble Escape = Disengage or Hide action as a bonus action")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "halfling":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Halfling Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Dexterity")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 25 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Lucky = if you roll a one you reroll the dice")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "elf":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Elf Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Dexterity")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 30 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Charm Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Proficiency In Perception")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "half-elf":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Half-Elf Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Charisma and 2 Ability Score increases")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 30 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Charm Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             elif race_info_input == "tiefling":
                 print(".")
-                time.sleep(1)
+                sleep(1)
                 print("----------Tiefling Stats----------")
-                time.sleep(1)
+                sleep(1)
                 print("- +2 to Charisma and +1 to Intelligence")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Darkvision")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Speed = 30 Feet")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("- Fire Resist")
-                time.sleep(0.1)
+                sleep(0.1)
                 print("type 'back' to go back")
                 race_stat_view()
             else:
@@ -232,37 +234,37 @@ def type_start():
         # def race info menu
         def race_info_menu():
             print(".")
-            time.sleep(1)
+            sleep(1)
             print("Each race efects your stats")
-            time.sleep(1)
+            sleep(1)
             print("Races:")
-            time.sleep(1)
+            sleep(1)
             print("Human")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Dwarf")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Gnome")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Goblin")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Halfling")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Elf")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Half-Elf")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Tiefling")
-            time.sleep(1)
+            sleep(1)
             print("Type a 'race' to see it's stats or type 'back'")
             race_info_menu_input()
             
         # race picking while loop
         while race_picked == False:
             print(".")
-            time.sleep(1)
+            sleep(1)
             name_hold = player["name"]
             print(f"What will {name_hold}'s race be?")
-            time.sleep(1)
+            sleep(1)
             print("type 'race info' for information on races, or type 'rand' for a random race.")
             race_pick_input = input().lower()
             if race_pick_input == "race info":
@@ -358,40 +360,40 @@ def type_start():
         # --------------------Picking stats--------------------
         # print stat instructions
         print(".")
-        time.sleep(1)
+        sleep(1)
         print(f"You have {stat_points} points to spend on stats.")
-        time.sleep(0.1)
+        sleep(0.1)
         print("The lowest your stats can go is 8 and the highest is 15.")
-        time.sleep(0.1)
+        sleep(0.1)
         print("your stats start at 8.")
-        time.sleep(0.1)
+        sleep(0.1)
         print("type '+'number or '-'number followed by the first three letters of a stat.")
-        time.sleep(0.1)
+        sleep(0.1)
         print("example - '+3str'")
-        time.sleep(0.1)
+        sleep(0.1)
         print("removing a point will give you that point back to be spent somewhere else.")
 
         # print stats
         def print_stats():
             print(".")
-            time.sleep(1)
+            sleep(1)
             print("-----Stats-----")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["str"]
             print(f"strength {hold}")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["dex"]
             print(f"dexterity {hold}")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["con"]
             print(f"constitution {hold}")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["int"]
             print(f"intelligence {hold}")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["wis"]
             print(f"wisdom {hold}")
-            time.sleep(0.1)
+            sleep(0.1)
             hold = player["cha"]
             print(f"charisma {hold}")
 
@@ -565,9 +567,9 @@ def type_start():
         # --------------------Race stat increases--------------------
         def ability_score_increase():
             print(".")
-            time.sleep(1)
+            sleep(1)
             print("abiltiy score increase")
-            time.sleep(0.1)
+            sleep(0.1)
             print("Type the first three letters of the ability you wish to increase by one")
             print_stats()
             ability_score_increase_input = input().lower()
@@ -638,24 +640,24 @@ def type_start():
 
         # print final stats
         print(".")
-        time.sleep(1)
+        sleep(1)
         print("-----Final Stats-----")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["str"]
         print(f"strength {hold}")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["dex"]
         print(f"dexterity {hold}")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["con"]
         print(f"constitution {hold}")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["int"]
         print(f"intelligence {hold}")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["wis"]
         print(f"wisdom {hold}")
-        time.sleep(0.1)
+        sleep(0.1)
         hold = player["cha"]
         print(f"charisma {hold}")
 
@@ -678,28 +680,28 @@ def type_start():
 
         # running start up text
         print(".")
-        time.sleep(1)
+        sleep(1)
         print(f"Welcome to Illdara {name_hold}")
-        time.sleep(1)
+        sleep(1)
         print("Type start to play: ")
         type_game_start()
 
         # intro text
         import time
         print(".")
-        time.sleep(1)
+        sleep(1)
         print("You have been called by His Majesty, 'High Eldchester Aldvon',")
         print("to Hunt the uncanny and Dangerous beasts, roaming the countryside.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("It is a sunny morning and the sun glistens off the dewy grass")
         print("as you leave the small picturesque town of Fellsburry.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("The path fades from cobble to a dusty dirt road")
         print("as you walk down the hill towards the Thornwood forest.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("--enter--")
         enter = input()
 
@@ -710,53 +712,53 @@ def type_start():
         print("As you come cloaser to the edge of the forest")
         print("you are stoped by a small hunched old man sitting on a ramshackle dirty cart.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("The man speeks to you in a creaky sharp voice.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("--enter--")
         enter = input()
         print("-----Old Man-----")
         print("I see your Leaving the city.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("Might I intrest you in some knowledge, sire?")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("--enter--")
         enter = input()
         print("Before you leave, there are a few things you must know.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("If you should ever in doubt along your travals just type '?'")
         print("To see what commands you can preform.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("You will learn the rest along the way.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("--enter--")
         enter = input()
         if new_to_this == True:
             print("-----Old Man-----")
             print(f"I see you are new to this {name_hold}.")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
             print("I shall give you two health potions")
             print
             print(".")
             player["invintory"].append("health_potion")
             player["invintory"].append("health_potion")
-            time.sleep(0.1)
+            sleep(0.1)
             print("--enter--")
             enter = input()
             print("-----Old Man-----")
             print("It seems you don't have a weapon yet.")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
             print("perhaps you will find somthing in this old cart of mine.")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
             print("--enter--")
             enter = input()
             print("-----------------")
@@ -764,23 +766,23 @@ def type_start():
             print("a slightly rusty short sword that still glints in the sun.")
             player["invintory"].append("short_sword")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
             print("--enter--")
             enter = input()
             print("-----Old Man-----")
             print("You still need to equip the sword in your invintory.")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
             print("But im sure you can figure it out.")
             print(".")
-            time.sleep(0.1)
+            sleep(0.1)
         print("That is all I have to say, good luck.")
         print("-----------------")
         print("--enter--")
         enter = input()
         print("After Talking to the old man, you continue on your way.")
         print(".")
-        time.sleep(0.1)
+        sleep(0.1)
         print("soon you see the forest looming cloaser, the trees seem to envelop you as you enter.")
 
 
@@ -832,7 +834,7 @@ def type_start():
 
 # running start up text
 print("Welcome to Oliver's magnifacint RPG simulator")
-time.sleep(1)
+sleep(1)
 print("Type start to play: ")
 type_start()
 
@@ -855,15 +857,15 @@ def forest_continue():
 # def ? input def
 def new_input_inputs():
     print(".")
-    time.sleep(0.1)
+    sleep(0.1)
     print("Here are a list of inputs for you to execute:")
-    time.sleep(0.1)
+    sleep(0.1)
     print("'c' or 'continue' to continue on you journy")
-    time.sleep(0.1)
+    sleep(0.1)
     print("'i' or 'invintory' to open your invintory")
-    time.sleep(0.1)
+    sleep(0.1)
     print("'l' or 'look' to investigate the surrounding area")
-    time.sleep(0.1)
+    sleep(0.1)
     print("'s' or 'sleep' to take a long rest")
 
 
@@ -874,7 +876,6 @@ def new_input_def():
     while new_input_done == False:
         new_input_done = True
         print(".")
-        time.sleep(0.1)
         print("if in doubt type '?'")
         new_input = input("input: ").lower()
         if new_input == "?":
@@ -897,18 +898,3 @@ def new_forest_area():
 # program start
 if player["area"] == "forest":
     new_forest_area()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
