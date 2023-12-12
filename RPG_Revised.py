@@ -1,4 +1,15 @@
 # --------------------Inports and basic variables--------------------
+global time
+global random
+global math
+global race_picked
+global race_info_true
+global hold
+global is_stats_done
+global stat_points
+global new_to_this
+global health_potion
+global player
 # inports
 import time
 import random
@@ -73,18 +84,6 @@ def type_start():
     start_input = input().lower()
     if start_input == "start":
         # --------------------Picking a name--------------------
-        global time
-        global time
-        global random
-        global math
-        global race_picked
-        global race_info_true
-        global hold
-        global is_stats_done
-        global stat_points
-        global new_to_this
-        global health_potion
-        global player
         print(".")
         time.sleep(1)
         print("Welcome adventurer")
@@ -785,7 +784,7 @@ def type_start():
         print("soon you see the forest looming cloaser, the trees seem to envelop you as you enter.")
 
 
-    elif start_input == "/inport":
+    elif start_input == "/import":
                 player = {
                     # base stats
                     "max_health": 0,
@@ -822,6 +821,9 @@ def type_start():
                     "ring_one": 0,
                     "ring_two": 0,
                     "amulet": 0,
+                    # player area
+                    "area": "forest",
+                    "where": "trail"
                 }
     else:
         type_start()
@@ -837,17 +839,76 @@ type_start()
 
 
 # --------------------Game run--------------------
+time = "morning"
+# invintory
+def invintory():
+    print(player["invintory"])
+
+
+
+# forest continue random
+def forest_continue():
+    ()
+    
+    
+    
+# def ? input def
+def new_input_inputs():
+    print(".")
+    time.sleep(0.1)
+    print("Here are a list of inputs for you to execute:")
+    time.sleep(0.1)
+    print("'c' or 'continue' to continue on you journy")
+    time.sleep(0.1)
+    print("'i' or 'invintory' to open your invintory")
+    time.sleep(0.1)
+    print("'l' or 'look' to investigate the surrounding area")
+    time.sleep(0.1)
+    print("'s' or 'sleep' to take a long rest")
+
+
+
 # input def
-def new_input():
-    print("if in doubt type '?'")
+def new_input_def():
+    new_input_done = False
+    while new_input_done == False:
+        new_input_done = True
+        print(".")
+        time.sleep(0.1)
+        print("if in doubt type '?'")
+        new_input = input("input: ").lower()
+        if new_input == "?":
+            new_input_inputs()
+        elif new_input == "c" or new_input == "continue":
+            forest_continue()
+        elif new_input == "i" or new_input == "invintory":
+            invintory()
+        else:
+            new_input_done = False
+            print("Invalid Input")
+
 
 # forest area
 def new_forest_area():
     while player["area"] == "forest":
          if player["where"] == "trail":
-             new_input()
+             new_input_def()
     
 # program start
 if player["area"] == "forest":
     new_forest_area()
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
