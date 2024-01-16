@@ -858,20 +858,25 @@ def invintory_input():
     if len(invintory_input_input) < 5:
         print("Invalid Input")
         invintory_input()
+
     elif invintory_input_input[0] == "e" and invintory_input_input[1] != "q":
         new_hold = invintory_input_input.replace(" ", "").replace("e", "", 1)
         if new_hold in player["invintory"]:
             equip()
+
     elif invintory_input_input[0] == "e" and invintory_input_input[1] == "q" and invintory_input_input[2] == "u" and invintory_input_input[3] == "i" and invintory_input_input[4] == "p":
         new_hold = invintory_input_input.replace(" ", "").replace("equip", "")
         if new_hold in player["invintory"]:
             equip()
+
     elif invintory_input_input[0] == "?":
         new_hold = invintory_input_input.replace(" ", "").replace("?", "")
         if new_hold == "health_potion":
             print("cheese curds")
+
     elif invintory_input_input == "back":
         ()
+
     else:
         print("Invalid Input")
         invintory_input()
@@ -892,8 +897,10 @@ def invintory():
 # forest continue random
 def forest_continue():
     hold = random.randrange(1, 3)
+
     if hold == 1:
         ()
+
     elif hold == 2:
         player["where"] = "goblin"
 
@@ -921,20 +928,26 @@ def new_input_inputs():
 # input def
 def new_input_def():
     new_input_done = False
+
     while new_input_done == False:
         new_input_done = True
         print(".")
         sleep(0.1)
         print("if in doubt type '?'")
         new_input = input("input: ").lower()
+
         if new_input == "?":
             new_input_inputs()
+
         elif new_input == "c" or new_input == "continue":
             forest_continue()
+
         elif new_input == "i" or new_input == "invintory":
             invintory()
+
         elif new_input == "p" or new_input == "player":
             print(player)
+
         else:
             new_input_done = False
             print("Invalid Input")
@@ -943,15 +956,20 @@ def new_input_def():
 # forest area
 def new_forest_area():
     while player["area"] == "forest":
+
         if player["where"] == "trail":
             hold = random.randrange(1, 4)
+
             if hold == 1:
                 print("Pine trees continue to envolop you on ether side.")
+
             elif hold == 2:
                 print("Pine and fir trees still continue to grow thick around you.")
+
             elif hold == 3:
                 print("not much changes among the trees as you continue")
             new_input_def()
+
         elif player["where"] == "goblin":
             print("sorry the fight is not done.")
             x = input()
