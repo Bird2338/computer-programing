@@ -44,6 +44,7 @@ player = {
     "int": 10,
     "wis": 10,
     "cha": 10,
+    "AC": 0,
     # abilitys
     "darkvision": 0,
     "resistances": [],
@@ -664,7 +665,8 @@ def type_start():
         # --------------------Health--------------------
         player["max_health"] = 5 + int(math.floor((player["con"] - 10) / 2))
         player["health"] = player["max_health"]
-
+        
+        player["AC"] = 10 + int(math.floor((player["dex"] - 10) / 2))
 
 
         # --------------------Start up text--------------------
@@ -801,6 +803,7 @@ def type_start():
                     "int": 10,
                     "wis": 10,
                     "cha": 10,
+                    "AC": 12,
                     # abilitys
                     "darkvision": 0,
                     "resistances": [],
@@ -839,6 +842,7 @@ type_start()
 
 # --------------------Game run--------------------
 time = "morning"
+
 # equiping
 def equip():
     if new_hold == "short_sword":
@@ -855,7 +859,9 @@ def equip():
 def invintory_input():
     global new_hold
     invintory_input_input = input("input: ").lower()
-    if len(invintory_input_input) < 5:
+    if invintory_input_input == "back":
+        ()
+    elif len(invintory_input_input) < 5:
         print("Invalid Input")
         invintory_input()
 
@@ -872,26 +878,126 @@ def invintory_input():
     elif invintory_input_input[0] == "?":
         new_hold = invintory_input_input.replace(" ", "").replace("?", "")
         if new_hold == "health_potion":
+<<<<<<< HEAD:semester_1/RPG_Revised.py
             print("cheese curds")
 
     elif invintory_input_input == "back":
         ()
 
+=======
+            print("A health_potion gives you 4d4 hitpoints.")
+        elif new_hold == "short_sword":
+            print("The short sword deals 1d6 + dex bounus damage.")
+    elif invintory_input_input == "health_potion" and "health_potion" in player["invintory"]:
+        player["invintory"].remove("health_potion")
+        player["health"] += random.randrange(1, 5)
+        print(player["health"])
+        player["health"] += random.randrange(1, 5)
+        print(player["health"])
+        player["health"] += random.randrange(1, 5)
+        print(player["health"])
+        player["health"] += random.randrange(1, 5)
+        print(player["health"])
+>>>>>>> db81cde9afe16ae1eaf46bb789eb2a3764b5880a:RPG_Revised.py
     else:
         print("Invalid Input")
         invintory_input()
         
-
+        
 
 # invintory
 def invintory():
     print(player["invintory"])
     print(".")
     sleep(0.1)
-    print("type 'e' or 'equip' folowed by the name of an item to equip it")
-    print("type '?' followed by the name of an item to veiw it's stats")
+    print("type 'e' or 'equip' folowed by the name of an item to equip it.")
+    print("type '?' followed by the name of an item to veiw it's stats.")
+    print("Type the name of an item to use it.")
     print("or type 'back' to go back")
     invintory_input() 
+
+# goblin stats
+goblin = {
+    "str": 8,
+    "dex": 14,
+    "con": 10,
+    "int": 10,
+    "wis": 8,
+    "cha": 8,
+    "health": 7,
+    "AC": 15
+}
+
+
+# combat_input()
+def combat_input():
+    print(f"You have {player['health']} health left")
+    print("what do you wish to do")
+    print("if in doubt type '?'")
+    combat_input_input = input("input: ").lower()
+    if combat_input_input == "?":
+        print("Here are a list of inputs for you to execute:")
+        sleep(0.1)
+        print("type 'a' or 'atack' to atack")
+        sleep(0.1)
+        print("type 'i' or 'invintory' in enter your invintory")
+        combat_input()
+    elif combat_input_input == "a" or "atack":
+        your_roll = random.randrange(1, 21)
+        if your_roll == 20:
+            print("you rolled a nat 20 hitting it and doubleing the damage")
+            your_atack = (random.randrange(1, 7) + int(math.floor((player["dex"] - 10) / 2))) * 2
+            print(f"you manage to crit and slash at the goblin across the chest dealing {your_atack} damage!")
+            goblin["health"] -= your_atack
+        elif your_roll == 1:
+            print("You Rolled a nat 1 and miss the goblin")
+        elif your_roll >= goblin["AC"]:
+            print(f"you Rolled a {your_roll} hitting the goblin")
+            your_atack = random.randrange(1, 7) + int(math.floor((player["dex"] - 10) / 2))
+            print(f"you manage to slash at the goblin across the chest dealing {your_atack} damage!")
+            goblin["health"] -= your_atack
+        else:
+            print(f"you rolled a {your_roll} missing the goblin")
+    elif combat_input_input == "i" or combat_input_input == "invintory":
+        invintory()
+        combat_input()  
+    
+    
+# goblin combat
+def goblin_combat():
+    print("Out of the bushes jumps a goblin, growling and gnashing it's teeth!")
+    global goblin
+    combat_over = False
+    while combat_over == False:
+        combat_input()
+        print("the goblin atempts to atack at you with it's short sword")
+        enemy_roll = random.randrange(1, 21)
+        if enemy_roll == 20:
+            print("The Goblin Rolled a nat 20 hitting you and doubleing the damage")
+            enemy_atack = (random.randrange(1, 7) + int(math.floor((goblin["dex"] - 10) / 2))) * 2
+            print(f"the goblin manages to crit and slash at you across the chest dealing {enemy_atack} damage!")
+            player["health"] -= enemy_atack
+        elif enemy_roll == 1:
+            print("The Goblin Rolled a nat 1 and misses you")
+        elif enemy_roll >= player["AC"]:
+            print(f"The Goblin Rolled a {enemy_roll} hitting you")
+            enemy_atack = random.randrange(1, 7) + int(math.floor((goblin["dex"] - 10) / 2))
+            print(f"the goblin manages to slash at you across the chest dealing {enemy_atack} damage!")
+            player["health"] -= enemy_atack
+        else:
+            print(f"The Goblin Rolled a {enemy_roll} missing you you")
+        if goblin["health"] <= 0:
+            combat_over = True
+            print("Yay, you have beaten the Goblin")
+            player["gold"] += random.randrange(1,11)
+            print(f"you now have {player['gold']} gold")
+            player["where"] = "trail"
+        if player["health"] <= 0:
+            combat_over = True
+            print("sad, You died")
+            exit()
+    
+
 
 
 # forest continue random
@@ -971,9 +1077,8 @@ def new_forest_area():
             new_input_def()
 
         elif player["where"] == "goblin":
-            print("sorry the fight is not done.")
-            x = input()
-            print(x)
+            print("as you stop in a clearing srounded by pines your spine runns cold as you realise your not alone. ")
+            goblin_combat()
 
     
 # program start
