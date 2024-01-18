@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbd4yhm8v1phq"]
+
+[ext_resource type="PackedScene" uid="uid://yt1e80eobncv" path="res://player_one.tscn" id="1_1s0fy"]
+
+[node name="pong_court" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.537255, 0.380392, 1)
+
+[node name="Player_one" parent="." instance=ExtResource("1_1s0fy")]
+position = Vector2(50, 360)

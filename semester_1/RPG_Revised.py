@@ -878,13 +878,6 @@ def invintory_input():
     elif invintory_input_input[0] == "?":
         new_hold = invintory_input_input.replace(" ", "").replace("?", "")
         if new_hold == "health_potion":
-<<<<<<< HEAD:semester_1/RPG_Revised.py
-            print("cheese curds")
-
-    elif invintory_input_input == "back":
-        ()
-
-=======
             print("A health_potion gives you 4d4 hitpoints.")
         elif new_hold == "short_sword":
             print("The short sword deals 1d6 + dex bounus damage.")
@@ -898,7 +891,6 @@ def invintory_input():
         print(player["health"])
         player["health"] += random.randrange(1, 5)
         print(player["health"])
->>>>>>> db81cde9afe16ae1eaf46bb789eb2a3764b5880a:RPG_Revised.py
     else:
         print("Invalid Input")
         invintory_input()
