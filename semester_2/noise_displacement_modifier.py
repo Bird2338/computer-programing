@@ -18,5 +18,4 @@ def get_noise(x, y):
 
             noise_points.append(f"({xfinal}, {yfinal})")
 
-    return_points = ','.join(noise_points)
-    return return_points
+    return ','.join(noise_points)
