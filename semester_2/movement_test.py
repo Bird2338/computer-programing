@@ -400,7 +400,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_0']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_0'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -430,7 +430,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_1']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_1'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -460,7 +460,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_2']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_2'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -490,7 +490,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_3']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_3'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -520,7 +520,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_4']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_4'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -550,7 +550,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_5']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_5'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -580,7 +580,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_6']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_6'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -610,7 +610,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_7']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_7'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -640,7 +640,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_8']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_8'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -670,7 +670,7 @@ def player_move():
                 if line_hold_split[29] == '-':
                     line_hold = lines['line_9']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_9'] = ''.join(line_hold_split)
                     player = (player[0], 29)
@@ -702,7 +702,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_0']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_0'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -732,7 +732,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_1']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_1'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -762,7 +762,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_2']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_2'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -792,7 +792,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_3']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_3'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -822,7 +822,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_4']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_4'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -852,7 +852,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_5']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_5'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -882,7 +882,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_6']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_6'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -912,7 +912,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_7']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_7'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -942,7 +942,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_8']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_8'] = ''.join(line_hold_split)
                     player = (player[0], 0)
@@ -972,7 +972,7 @@ def player_move():
                 if line_hold_split[0] == '-':
                     line_hold = lines['line_9']
                     line_hold_split = [*line_hold]
-                    num_hold = int(player[0])
+                    num_hold = int(player[1])
                     line_hold_split[num_hold] = '-'
                     lines['line_9'] = ''.join(line_hold_split)
                     player = (player[0], 0)
