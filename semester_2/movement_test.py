@@ -418,7 +418,550 @@ def player_move():
                     line_hold_split[num_hold] = '-'
                     lines['line_0'] = ''.join(line_hold_split)
                     player = (player[0], num_hold - 1)
+        
+        if player[0] == 1:
 
+            if player[1] == 0:
+
+                line_hold = lines['line_1']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_1']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_1'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_1']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_1']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_1'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 2:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_2']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_2']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_2'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_2']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_2']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_2'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 3:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_3']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_3']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_3'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_3']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_3']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_3'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 4:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_4']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_4']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_4'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_4']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_4']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_4'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 5:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_5']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_5']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_5'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_5']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_5']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_5'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 6:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_6']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_6']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_6'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_6']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_6']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_6'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 7:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_7']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_7']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_7'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_7']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_7']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_7'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 8:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_8']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_8']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_8'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_8']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_8']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_8'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+        if player[0] == 9:
+
+            if player[1] == 0:
+
+                line_hold = lines['line_9']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[29] == '-':
+                    line_hold = lines['line_9']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_9'] = ''.join(line_hold_split)
+                    player = (player[0], 29)
+            
+            else:
+
+                line_hold = lines['line_9']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold - 1] == '-':
+                    line_hold = lines['line_9']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_9'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold - 1)
+                    
+    if move_input == 'd':
+        
+        if player[0] == 0:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_0']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_0']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_0'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_0']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_0']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_0'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+        
+        if player[0] == 1:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_1']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_1']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_1'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_1']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_1']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_1'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 2:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_2']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_2']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_2'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_2']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_2']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_2'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 3:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_3']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_3']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_3'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_3']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_3']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_3'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 4:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_4']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_4']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_4'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_4']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_4']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_4'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 5:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_5']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_5']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_5'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_5']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_5']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_5'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 6:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_6']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_6']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_6'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_6']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_6']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_6'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 8:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_8']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_8']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_8'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_8']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_8']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_8'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        if player[0] == 9:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_9']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_9']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_9'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_9']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_9']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_9'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
+                    
+        
 
 
 
