@@ -900,6 +900,36 @@ def player_move():
                     line_hold_split[num_hold] = '-'
                     lines['line_6'] = ''.join(line_hold_split)
                     player = (player[0], num_hold + 1)
+
+        if player[0] == 7:
+
+            if player[1] == 29:
+
+                line_hold = lines['line_7']
+                line_hold_split = [*line_hold]
+                num_hold = player[0]
+
+                if line_hold_split[0] == '-':
+                    line_hold = lines['line_7']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[0])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_7'] = ''.join(line_hold_split)
+                    player = (player[0], 0)
+            
+            else:
+
+                line_hold = lines['line_7']
+                line_hold_split = [*line_hold]
+                num_hold = player[1]
+
+                if line_hold_split[num_hold + 1] == '-':
+                    line_hold = lines['line_7']
+                    line_hold_split = [*line_hold]
+                    num_hold = int(player[1])
+                    line_hold_split[num_hold] = '-'
+                    lines['line_7'] = ''.join(line_hold_split)
+                    player = (player[0], num_hold + 1)
                     
         if player[0] == 8:
 
